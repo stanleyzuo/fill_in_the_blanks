@@ -1,3 +1,15 @@
-Display all of your posts here
+<h1> Posts </h1>
+<br/>
+
+<% @posts.each do |post| %>
+<div>
+	<strong><%=link_to post.title, post_path(post) %></strong>
+	<P><%= post.body %></p>
+	<p> Submitted by: <%= post.bru_name %></p>
+	<hr/> 
+	<br/>
+</div>
+<% end %> 
+<h2> <%= link_to 'New Post', new_post_path %> </h2>
 
 <!-- Create the rest of your views in the posts folder -->
